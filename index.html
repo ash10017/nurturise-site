@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NurtuRise Advisory</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script type="module" src="firebase-setup.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <img src="assets/logo.png" class="logo-img" alt="NurtuRise Logo" />
+      <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#booking">Book</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#login">Login</a></li>
+      </ul>
+      <button id="mode-toggle" aria-label="Toggle light/dark mode">🌓</button>
+    </div>
+  </nav>
+
+  <a href="#" id="scrollTopBtn">↑</a>
+
+  <header class="hero">
+    <h1>Empowering Growth Through Strategic Advisory</h1>
+    <p>Tailored financial and strategic solutions for startups & businesses.</p>
+    <a href="#contact" class="cta-button">Let's Talk</a>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About NurtuRise Advisory</h2>
+      <p>NurtuRise Advisory is a boutique consulting firm specializing in startup advisory, fundraising strategy, and operational scaling. We partner with founders to provide actionable insights and measurable results.</p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li><strong>Fundraising & Investor Collaterals</strong>: Pitch decks, CIMs, investor outreach.</li>
+        <li><strong>Business & Financial Planning</strong>: Models, forecasts, planning.</li>
+        <li><strong>Transaction Support</strong>: Due diligence, valuations, deals.</li>
+        <li><strong>Operational Scaling</strong>: Hiring, growth, systems.</li>
+      </ul>
+    </section>
+
+    <section id="why">
+      <h2>Why NurtuRise?</h2>
+      <div class="why-grid">
+        <div class="why-box">Founder-first Approach</div>
+        <div class="why-box">Tailored, Hands-on Support</div>
+        <div class="why-box">Proven Fundraising Success</div>
+        <div class="why-box">Deep Sector Experience</div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <div class="testimonial">
+        <p>"NurtuRise Advisory helped us refine our strategy and secure our seed funding with confidence." – Founder, HealthTech Startup</p>
+      </div>
+      <div class="testimonial">
+        <p>"Insightful, responsive, and deeply committed to our growth journey." – CEO, SaaS Platform</p>
+      </div>
+    </section>
+
+    <section id="blog">
+      <h2>Blog Insights</h2>
+      <div class="blog-post">
+        <h3>Raising Capital in 2025: What Founders Should Know</h3>
+        <p>Insights on investor expectations and how to prepare your story...</p>
+      </div>
+      <div class="blog-post">
+        <h3>Strategic Planning for Scale</h3>
+        <p>Frameworks and templates to streamline your operational growth.</p>
+      </div>
+    </section>
+
+    <section id="booking">
+      <h2>Book a Consultation</h2>
+      <div class="calendly-container">
+        <iframe src="https://calendly.com/your-username/30min" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form" novalidate>
+        <input type="text" placeholder="Your Name" name="name" required />
+        <input type="email" placeholder="Your Email" name="email" required />
+        <input type="text" placeholder="Company Name" name="company" />
+        <textarea placeholder="Your Message" name="message" required></textarea>
+        <button type="submit" class="cta-button">Send Message</button>
+      </form>
+    </section>
+
+    <section id="login">
+      <h2>Client Login / Signup</h2>
+      <form id="login-form">
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit" class="cta-button">Login</button>
+      </form>
+      <button id="signup-btn">Sign Up</button>
+      <button id="reset-btn">Forgot Password?</button>
+      <p id="login-status"></p>
+    </section>
+
+    <section id="dashboard" style="display:none;">
+      <h2>Welcome, <span id="user-email"></span></h2>
+      <p>This is your client dashboard. More features coming soon.</p>
+      <div id="dashboard-content">
+        <h3>Your Resources</h3>
+        <ul id="user-resources">
+          <li><a href="/resources/fundraising-checklist.pdf" target="_blank">Fundraising Checklist</a></li>
+        </ul>
+      </div>
+      <button id="logout">Log Out</button>
+    </section>
+
+    <section id="footer">
+      <h2>Stay Connected</h2>
+      <p>Follow us on social media for the latest updates and insights.</p>
+      <ul class="social-links">
+        <li><a href="https://www.linkedin.com/company/nurturise-advisory" target="_blank">LinkedIn</a></li>
+        <li><a href="https://twitter.com/nurturiseadvisory" target="_blank">Twitter</a></li>
+        <li><a href="https://www.facebook.com/nurturiseadvisory" target="_blank">Facebook</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 NurtuRise Advisory LLP</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
