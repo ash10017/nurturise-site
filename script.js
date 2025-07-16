@@ -1,4 +1,19 @@
 // Form submit handler with validation and feedback
+
+import { auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, onAuthStateChanged, signOut } from './firebase-setup.js';
+
+// Modal + form handlers
+window.addEventListener('DOMContentLoaded', () => {
+  // Modal open/close code...
+  document.getElementById('login-form').addEventListener('submit', e => {
+    // firebase login
+  });
+  // signup & reset handlers...
+  onAuthStateChanged(auth, user => {
+    // show/hide dashboard
+  });
+});
+
 const form = document.getElementById("contact-form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -68,15 +83,15 @@ scrollTopBtn.addEventListener("click", (e) => {
 });
 
 
-// LOGIN FEATURE
-document.getElementById("login-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const email = this.querySelector("input[type='email']").value;
-  const password = this.querySelector("input[type='password']").value;
+// // LOGIN FEATURE
+// document.getElementById("login-form").addEventListener("submit", function (e) {
+//   e.preventDefault();
+//   const email = this.querySelector("input[type='email']").value;
+//   const password = this.querySelector("input[type='password']").value;
 
-  if (email === "client@nurturise.com" && password === "welcome123") {
-    document.getElementById("login-status").textContent = "Login successful!";
-  } else {
-    document.getElementById("login-status").textContent = "Invalid credentials.";
-  }
-});
+//   if (email === "client@nurturise.com" && password === "welcome123") {
+//     document.getElementById("login-status").textContent = "Login successful!";
+//   } else {
+//     document.getElementById("login-status").textContent = "Invalid credentials.";
+//   }
+// });

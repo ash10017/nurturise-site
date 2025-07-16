@@ -8,6 +8,7 @@ import {
   signOut
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
+// Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyCrJeeVMCASB568y3FGzsi6NfzxQ8X66dE",
   authDomain: "nurturise-5346e.firebaseapp.com",
@@ -20,59 +21,78 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// LOGIN
-document.getElementById("login-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const email = this.querySelector("input[type='email']").value;
-  const password = this.querySelector("input[type='password']").value;
+export {
+  auth, signInWithEmailAndPassword, createUserWithEmailAndPassword,
+  sendPasswordResetEmail, onAuthStateChanged, signOut
+};
 
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      document.getElementById("login-status").textContent = "Login successful!";
-    })
-    .catch((error) => {
-      console.error(error);
-      document.getElementById("login-status").textContent = "Invalid email or password.";
-    });
-});
+// LOGIN
+const loginForm = document.getElementById("login-form");
+if (loginForm) {
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const email = this.querySelector("input[type='email']").value;
+    const password = this.querySelector("input[type='password']").value;
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        document.getElementById("login-status").textContent = "Login successful! Redirecting...";
+        setTimeout(() => {
+          window.location.href = "dashboard.html"; // Redirect to dashboard
+        }, 1000);
+      })
+      .catch((error) => {
+        console.error(error);
+        document.getElementById("login-status").textContent = "Invalid email or password.";
+      });
+  });
+}
 
 // SIGNUP
-document.getElementById("signup-btn").addEventListener("click", () => {
-  const email = prompt("Enter your email for signup:");
-  const password = prompt("Enter a password:");
-  if (email && password) {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then(() => alert("Signup successful! Please log in."))
-      .catch((err) => alert("Signup failed: " + err.message));
-  }
-});
+const signupBtn = document.getElementById("signup-btn");
+if (signupBtn) {
+  signupBtn.addEventListener("click", () => {
+    const email = prompt("Enter your email for signup:");
+    const password = prompt("Enter a password:");
+    if (email && password) {
+      createUserWithEmailAndPassword(auth, email, password)
+        .then(() => alert("Signup successful! Please log in."))
+        .catch((err) => alert("Signup failed: " + err.message));
+    }
+  });
+}
 
 // PASSWORD RESET
-document.getElementById("reset-btn").addEventListener("click", () => {
-  const email = prompt("Enter your email to reset password:");
-  if (email) {
-    sendPasswordResetEmail(auth, email)
-      .then(() => alert("Password reset email sent!"))
-      .catch((err) => alert("Error: " + err.message));
-  }
-});
-
-// LOGOUT
-document.getElementById("logout").addEventListener("click", () => {
-  signOut(auth).then(() => {
-    document.getElementById("dashboard").style.display = "none";
-    document.getElementById("login").style.display = "block";
+const resetBtn = document.getElementById("reset-btn");
+if (resetBtn) {
+  resetBtn.addEventListener("click", () => {
+    const email = prompt("Enter your email to reset password:");
+    if (email) {
+      sendPasswordResetEmail(auth, email)
+        .then(() => alert("Password reset email sent!"))
+        .catch((err) => alert("Error: " + err.message));
+    }
   });
-});
+}
 
-// AUTH STATE CHANGE
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    document.getElementById("login").style.display = "none";
-    document.getElementById("dashboard").style.display = "block";
-    document.getElementById("user-email").textContent = user.email;
-  } else {
-    document.getElementById("dashboard").style.display = "none";
-    document.getElementById("login").style.display = "block";
-  }
-});
+// LOGOUT (on dashboard.html)
+const logoutBtn = document.getElementById("logout");
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", () => {
+    signOut(auth).then(() => {
+      window.location.href = "index.html"; // Go back to homepage after logout
+    });
+  });
+}
+
+// Optional: auth guard for dashboard
+if (window.location.pathname.includes("dashboard.html")) {
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      window.location.href = "index.html"; // force back to homepage if not logged in
+    } else {
+      const emailDisplay = document.getElementById("user-email");
+      if (emailDisplay) emailDisplay.textContent = user.email;
+    }
+  });
+}
