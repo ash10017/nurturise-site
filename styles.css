@@ -353,3 +353,95 @@ body.dark .founder-full-card {
     margin: auto;
   }
 }
+.nav-links a.active {
+  color: var(--accent);
+}
+
+.breadcrumb {
+  max-width: 1100px;
+  margin: 1rem auto 0;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+/* ENGAGEMENT MODEL – VISUAL */
+
+.engagement-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.engagement-card {
+  background: var(--card-light);
+  padding: 2.5rem;
+  border-radius: 18px;
+  position: relative;
+}
+
+body.dark .engagement-card {
+  background: var(--card-dark);
+}
+
+.engagement-icon {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.engagement-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.engagement-card ul {
+  padding-left: 1.2rem;
+}
+
+.engagement-card li {
+  margin-bottom: 0.4rem;
+}
+
+.engagement-card .muted {
+  opacity: 0.75;
+  font-size: 0.9rem;
+}
+
+.duration {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(0,0,0,0.05);
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  margin-right: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+body.dark .tag {
+  background: rgba(255,255,255,0.1);
+}
+
+.pill {
+  display: inline-block;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  margin-right: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.highlight {
+  border: 2px solid var(--accent);
+}
+
+.muted-card {
+  opacity: 0.9;
+}
