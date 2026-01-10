@@ -263,3 +263,93 @@ footer {
   padding: 1.5rem;
   opacity: 0.8;
 }
+
+/* FOUNDERS – HOMEPAGE PREVIEW */
+.founders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.founder-preview-card {
+  background: var(--card-light);
+  padding: 2rem;
+  border-radius: 14px;
+  text-align: center;
+}
+
+body.dark .founder-preview-card {
+  background: var(--card-dark);
+}
+
+.founder-photo {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.founder-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founder-title {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.founder-blurb {
+  font-size: 0.95rem;
+  margin: 1rem 0;
+}
+
+.founder-link {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* FOUNDERS – FULL PAGE */
+.founders-page-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.founder-full-card {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2rem;
+  background: var(--card-light);
+  padding: 2.5rem;
+  border-radius: 16px;
+}
+
+body.dark .founder-full-card {
+  background: var(--card-dark);
+}
+
+.founder-photo.large {
+  width: 160px;
+  height: 160px;
+}
+
+.founder-content h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .founder-full-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .founder-photo.large {
+    margin: auto;
+  }
+}
