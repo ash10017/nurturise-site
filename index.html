@@ -3,131 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NurtuRise Advisory</title>
+  <title>NurtuRise Advisors</title>
+
   <link rel="stylesheet" href="styles.css" />
   <script src="https://unpkg.com/scrollreveal"></script>
   <script type="module" src="firebase-setup.js"></script>
 </head>
+
 <body>
-  <nav class="navbar">
-    <div class="nav-content">
-      <img src="assets/logo.png" class="logo-img" alt="NurtuRise Logo" />
-      <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#why">Why Us</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#booking">Book</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#login" id="scrollToLogin">Login</a></li>
-      </ul>
-      <button id="mode-toggle" aria-label="Toggle light/dark mode">🌓</button>
+
+<nav class="navbar">
+  <div class="nav-content">
+    <img src="assets/logo.png" class="logo-img" alt="NurtuRise Advisors" />
+
+    <button id="menu-toggle">☰</button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#vision">Philosophy</a></li>
+      <li><a href="#value">Why Us</a></li>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#engagement">Engagement</a></li>
+      <li><a href="founders.html">Founders</a></li>
+      <li><a href="#login">Login</a></li>
+    </ul>
+
+    <button id="mode-toggle">🌓</button>
+  </div>
+</nav>
+
+<header class="hero-deck">
+  <div class="hero-content">
+    <h1>The Perfect Bridge Between<br/>Startups & Institutional Capital</h1>
+    <p>
+      Strategic capital advisory for Seed to Series A founders.<br/>
+      Built by leaders who have navigated multiple investment cycles.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#journey" class="cta-button">Explore Our Approach</a>
+      <a href="#login" class="cta-secondary">Engage With Us</a>
     </div>
-  </nav>
 
-  <a href="#" id="scrollTopBtn">↑</a>
+    <span class="hero-footnote">
+      Founded July 2025 · Alok Bajoria & Ashok Chandavarkar
+    </span>
+  </div>
+</header>
 
-  <header class="hero">
-    <h1>Empowering Growth Through Strategic Advisory</h1>
-    <p>Tailored financial and strategic solutions for startups & businesses.</p>
-    <a href="#contact" class="cta-button">Let's Talk</a>
-  </header>
+<main>
 
-  <main>
-    <section id="about">
-      <h2>About NurtuRise Advisory</h2>
-      <p>NurtuRise Advisory is a boutique consulting firm specializing in startup advisory, fundraising strategy, and operational scaling. We partner with founders to provide actionable insights and measurable results.</p>
-    </section>
+<section id="vision" class="deck-section">
+  <h2>Our Philosophy</h2>
 
-    <section id="services">
-      <h2>Our Services</h2>
+  <div class="triple-grid">
+    <div class="deck-card">
+      <h3>Vision</h3>
+      <p>
+        To be a trusted strategic partner enabling startup founders to unlock
+        transformative growth through capital, insight, and connections.
+      </p>
+    </div>
+
+    <div class="deck-card">
+      <h3>Mission</h3>
+      <p>
+        To nurture early-stage ventures by delivering investment banking and
+        strategic advisory that accelerates their journey via institutional
+        capital for scalable impact.
+      </p>
+    </div>
+
+    <div class="deck-card">
+      <h3>Objectives</h3>
       <ul>
-        <li><strong>Fundraising & Investor Collaterals</strong>: Pitch decks, CIMs, investor outreach.</li>
-        <li><strong>Business & Financial Planning</strong>: Models, forecasts, planning.</li>
-        <li><strong>Transaction Support</strong>: Due diligence, valuations, deals.</li>
-        <li><strong>Operational Scaling</strong>: Hiring, growth, systems.</li>
+        <li>Capital Advisory</li>
+        <li>Strategic Enablement</li>
+        <li>Ecosystem Access</li>
+        <li>Ethics & Transparency</li>
       </ul>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="why">
-      <h2>Why NurtuRise?</h2>
-      <div class="why-grid">
-        <div class="why-box">Founder-first Approach</div>
-        <div class="why-box">Tailored, Hands-on Support</div>
-        <div class="why-box">Proven Fundraising Success</div>
-        <div class="why-box">Deep Sector Experience</div>
-      </div>
-    </section>
+<section id="value" class="deck-section alt-bg">
+  <h2>Why NurtuRise</h2>
 
-    <section id="testimonials">
-      <h2>Testimonials</h2>
-      <div class="testimonial">
-        <p>"NurtuRise Advisory helped us refine our strategy and secure our seed funding with confidence." – Founder, HealthTech Startup</p>
-      </div>
-      <div class="testimonial">
-        <p>"Insightful, responsive, and deeply committed to our growth journey." – CEO, SaaS Platform</p>
-      </div>
-    </section>
+  <div class="value-grid">
+    <div class="value-box">
+      <h3>Deep Experience</h3>
+      <p>
+        60+ years of consolidated corporate leadership and 25+ years across
+        venture capital, fundraising, IPOs, M&A, and secondary exits.
+      </p>
+    </div>
 
-    <section id="blog">
-      <h2>Blog Insights</h2>
-      <div class="blog-post">
-        <h3>Raising Capital in 2025: What Founders Should Know</h3>
-        <p>Insights on investor expectations and how to prepare your story...</p>
-      </div>
-      <div class="blog-post">
-        <h3>Strategic Planning for Scale</h3>
-        <p>Frameworks and templates to streamline your operational growth.</p>
-      </div>
-    </section>
+    <div class="value-box">
+      <h3>Strong Networks</h3>
+      <p>
+        Deep relationships with Angels, VCs, PE funds, accelerators,
+        legal, tax, government bodies, and ecosystem partners.
+      </p>
+    </div>
 
-    <section id="booking">
-      <h2>Book a Consultation</h2>
-      <div class="calendly-container">
-        <iframe src="https://calendly.com/your-username/30min" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </section>
+    <div class="value-box">
+      <h3>Long-Term Partnership</h3>
+      <p>
+        We engage beyond the current round — guiding founders through
+        multi-cycle journeys from capital raise to exit.
+      </p>
+    </div>
+  </div>
+</section>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <form id="contact-form" novalidate>
-        <input type="text" placeholder="Your Name" name="name" required />
-        <input type="email" placeholder="Your Email" name="email" required />
-        <input type="text" placeholder="Company Name" name="company" />
-        <textarea placeholder="Your Message" name="message" required></textarea>
-        <button type="submit" class="cta-button">Send Message</button>
-      </form>
-    </section>
+<section id="journey" class="deck-section">
+  <h2>Fundraising Engagement Journey</h2>
+  <p class="section-subtitle">Typical timeline: 18–30 weeks</p>
 
-    <section id="login">
-      <h2>Client Login / Signup</h2>
-      <form id="login-form">
-        <input type="email" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
-        <button type="submit" class="cta-button">Login</button>
-      </form>
-      <button id="signup-btn">Sign Up</button>
-      <button id="reset-btn">Forgot Password?</button>
-      <p id="login-status"></p>
-    </section>
+  <div class="journey-road desktop-only">
+    <div class="road-step">1<br/><span>Readiness</span></div>
+    <div class="road-step">2<br/><span>Strategy</span></div>
+    <div class="road-step">3<br/><span>Targeting</span></div>
+    <div class="road-step">4<br/><span>Investor Calls</span></div>
+    <div class="road-step">5<br/><span>Due Diligence</span></div>
+    <div class="road-step">6<br/><span>Closure</span></div>
+  </div>
 
-    <section id="footer">
-      <h2>Stay Connected</h2>
-      <p>Follow us on social media for the latest updates and insights.</p>
-      <ul class="social-links">
-        <li><a href="https://www.linkedin.com/company/nurturise-advisory" target="_blank">LinkedIn</a></li>
-        <li><a href="https://twitter.com/nurturiseadvisory" target="_blank">Twitter</a></li>
-        <li><a href="https://www.facebook.com/nurturiseadvisory" target="_blank">Facebook</a></li>
+  <div class="journey-stepper mobile-only">
+    <div class="step">1. Business evaluation & readiness</div>
+    <div class="step">2. Strategy, story & valuation</div>
+    <div class="step">3. Investor targeting & outreach</div>
+    <div class="step">4. Calls, pitch refinement, TS negotiation</div>
+    <div class="step">5. Data room & DD facilitation</div>
+    <div class="step">6. Fund transfer & closure</div>
+  </div>
+</section>
+
+<section id="engagement" class="deck-section alt-bg">
+  <h2>Engagement Model</h2>
+
+  <div class="engagement-grid">
+    <div>
+      <h3>Stage & Sector</h3>
+      <p>Early-stage startups with PMF<br/>Tech: B2B, B2G, B2B2C</p>
+    </div>
+
+    <div>
+      <h3>Funding Rounds</h3>
+      <p>Seed to Series A</p>
+    </div>
+
+    <div>
+      <h3>Commercials</h3>
+      <ul>
+        <li>Retainer (upfront)</li>
+        <li>Success fee (on close)</li>
+        <li>Expenses (capped)</li>
       </ul>
-    </section>
-  </main>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 NurtuRise Advisory LLP</p>
-  </footer>
+    <div>
+      <h3>Duration</h3>
+      <p>6–12 months</p>
+    </div>
 
-  <script src="script.js"></script>
+    <div>
+      <h3>Out of Scope</h3>
+      <ul>
+        <li>Deck creation</li>
+        <li>Investor pitching</li>
+        <li>Legal / tax advisory</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="login" class="deck-section login-section">
+  <h2>Client Login</h2>
+
+  <form id="login-form">
+    <input type="email" placeholder="Email" required />
+    <input type="password" placeholder="Password" required />
+    <button class="cta-button">Login</button>
+  </form>
+
+  <button id="signup-btn">Sign Up</button>
+  <button id="reset-btn">Forgot Password?</button>
+  <p id="login-status"></p>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2025 NurtuRise Advisors LLP</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
