@@ -122,3 +122,11 @@ ScrollReveal().reveal('.journey-step-node', {
   interval: 120
 });
 
+ScrollReveal().reveal('.contact-card', {
+  distance: '24px',
+  duration: 900,
+  easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+  origin: 'bottom',
+  interval: 150
+});
+

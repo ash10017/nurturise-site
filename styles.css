@@ -662,3 +662,158 @@ body.dark .node-icon {
     display: block;
   }
 }
+
+/* CONTACT SECTION – PREMIUM */
+
+.contact-section {
+  background: linear-gradient(
+    135deg,
+    rgba(128, 90, 213, 0.08),
+    rgba(128, 90, 213, 0.03)
+  );
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+body.dark .contact-section {
+  background: linear-gradient(
+    135deg,
+    rgba(128, 90, 213, 0.18),
+    rgba(128, 90, 213, 0.08)
+  );
+  border-color: rgba(255,255,255,0.1);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.contact-card {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+body.dark .contact-card {
+  background: #1e1e1e;
+}
+
+.contact-card.highlight {
+  border: 2px solid var(--accent);
+}
+
+.contact-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-card h3 {
+  margin-bottom: 1rem;
+}
+
+.contact-item a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.address-text {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.legal-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed rgba(0,0,0,0.15);
+  font-size: 0.9rem;
+}
+
+body.dark .legal-item {
+  border-color: rgba(255,255,255,0.15);
+}
+
+.legal-item span {
+  opacity: 0.75;
+}
+
+.legal-item strong {
+  font-weight: 600;
+}
+
+/* LOGIN PAGE */
+
+.login-hero {
+  min-height: 40vh;
+}
+
+.login-page-section {
+  display: flex;
+  justify-content: center;
+}
+
+.login-card {
+  max-width: 420px;
+  width: 100%;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 22px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+body.dark .login-card {
+  background: #1e1e1e;
+}
+
+.login-card h2 {
+  margin-bottom: 1.5rem;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+body.dark .login-card input {
+  background: #121212;
+  color: #fff;
+  border-color: rgba(255,255,255,0.2);
+}
+
+.full-width {
+  width: 100%;
+}
+
+.login-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.link-btn:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Client Login – NurtuRise Advisors</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Secure client login for NurtuRise Advisors." />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Libraries -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-content">
+    <img src="assets/logo.png" class="logo-img" alt="NurtuRise Advisors" />
+    <button id="menu-toggle">☰</button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="why-us.html">Why Us</a></li>
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="engagement.html">Engagement</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="founders.html">Founders</a></li>
+      <li><a href="login.html" class="active">Login</a></li>
+    </ul>
+
+    <button id="mode-toggle">🌓</button>
+  </div>
+</nav>
+
+<!-- LOGIN HERO -->
+<header class="hero-deck login-hero">
+  <div class="hero-content">
+    <h1>Client Access</h1>
+    <p>
+      Secure access for clients and partners of NurtuRise Advisors.
+    </p>
+  </div>
+</header>
+
+<main>
+
+<!-- LOGIN CARD -->
+<section class="deck-section login-page-section">
+  <div class="login-card">
+
+    <h2>Sign in to your account</h2>
+
+    <form id="login-form">
+      <input type="email" placeholder="Email address" required />
+      <input type="password" placeholder="Password" required />
+      <button class="cta-button full-width">Login</button>
+    </form>
+
+    <div class="login-actions">
+      <button id="signup-btn" class="link-btn">Create an account</button>
+      <button id="reset-btn" class="link-btn">Forgot password?</button>
+    </div>
+
+    <p id="login-status"></p>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2025 NurtuRise Advisors LLP · All rights reserved</p>
+</footer>
+
+<!-- Scripts -->
+<script src="script.js" defer></script>
+<script type="module" src="firebase-setup.js"></script>
+
+</body>
+</html>
