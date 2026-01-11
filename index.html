@@ -5,13 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NurtuRise Advisors</title>
 
+  <!-- SEO -->
+  <meta name="description" content="NurtuRise Advisors is a strategic capital advisory firm partnering with founders from Seed to Series A to unlock long-term value through institutional capital." />
+  <meta name="author" content="NurtuRise Advisors LLP" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Libraries -->
   <script src="https://unpkg.com/scrollreveal"></script>
-  <script type="module" src="firebase-setup.js"></script>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="nav-content">
     <img src="assets/logo.png" class="logo-img" alt="NurtuRise Advisors" />
@@ -19,10 +26,12 @@
     <button id="menu-toggle">☰</button>
 
     <ul class="nav-links" id="nav-links">
-      <li><a href="#vision">Philosophy</a></li>
-      <li><a href="#value">Why Us</a></li>
-      <li><a href="#journey">Journey</a></li>
-      <li><a href="#engagement">Engagement</a></li>
+      <li><a href="index.html" class="nav-home active">Home</a></li>
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="why-us.html">Why Us</a></li>
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="engagement.html">Engagement</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
       <li><a href="founders.html">Founders</a></li>
       <li><a href="#login">Login</a></li>
     </ul>
@@ -31,16 +40,21 @@
   </div>
 </nav>
 
-<header class="hero-deck">
+<!-- HERO -->
+<header class="hero-deck" data-section="home">
   <div class="hero-content">
-    <h1>The Perfect Bridge Between<br/>Startups & Institutional Capital</h1>
+    <h1>
+      The Perfect Bridge Between<br/>
+      Startups & Institutional Capital
+    </h1>
+
     <p>
       Strategic capital advisory for Seed to Series A founders.<br/>
       Built by leaders who have navigated multiple investment cycles.
     </p>
 
     <div class="hero-cta">
-      <a href="#journey" class="cta-button">Explore Our Approach</a>
+      <a href="journey.html" class="cta-button">Explore Our Approach</a>
       <a href="#login" class="cta-secondary">Engage With Us</a>
     </div>
 
@@ -52,11 +66,13 @@
 
 <main>
 
-<section id="vision" class="deck-section">
+<!-- PHILOSOPHY -->
+<section id="vision" class="deck-section" data-section="vision">
   <h2>Our Philosophy</h2>
 
   <div class="triple-grid">
     <div class="deck-card">
+      <div class="section-icon">🧭</div>
       <h3>Vision</h3>
       <p>
         To be a trusted strategic partner enabling startup founders to unlock
@@ -65,58 +81,70 @@
     </div>
 
     <div class="deck-card">
+      <div class="section-icon">🚀</div>
       <h3>Mission</h3>
       <p>
-        To nurture early-stage ventures by delivering investment banking and
-        strategic advisory that accelerates their journey via institutional
-        capital for scalable impact.
+        To nurture early-stage ventures by delivering disciplined investment
+        banking and strategic advisory for scalable impact.
       </p>
     </div>
 
     <div class="deck-card">
-      <h3>Objectives</h3>
+      <div class="section-icon">⚖️</div>
+      <h3>Operating Principles</h3>
       <ul>
-        <li>Capital Advisory</li>
-        <li>Strategic Enablement</li>
-        <li>Ecosystem Access</li>
-        <li>Ethics & Transparency</li>
+        <li>Founder–investor alignment</li>
+        <li>Long-term orientation</li>
+        <li>Ethics & transparency</li>
+        <li>Capital with context</li>
       </ul>
     </div>
   </div>
+
+  <div class="center" style="margin-top:2rem">
+    <a href="philosophy.html" class="cta-secondary">Explore our philosophy →</a>
+  </div>
 </section>
 
-<section id="value" class="deck-section alt-bg">
+<!-- WHY US -->
+<section id="value" class="deck-section alt-bg" data-section="value">
   <h2>Why NurtuRise</h2>
 
   <div class="value-grid">
     <div class="value-box">
+      <div class="section-icon">🏛️</div>
       <h3>Deep Experience</h3>
       <p>
-        60+ years of consolidated corporate leadership and 25+ years across
-        venture capital, fundraising, IPOs, M&A, and secondary exits.
+        60+ years across venture capital, IPOs, M&A, and institutional fundraising.
       </p>
     </div>
 
     <div class="value-box">
-      <h3>Strong Networks</h3>
+      <div class="section-icon">🌐</div>
+      <h3>Institutional Networks</h3>
       <p>
-        Deep relationships with Angels, VCs, PE funds, accelerators,
-        legal, tax, government bodies, and ecosystem partners.
+        Trusted relationships with angels, VCs, PE funds,
+        accelerators, and ecosystem partners.
       </p>
     </div>
 
     <div class="value-box">
-      <h3>Long-Term Partnership</h3>
+      <div class="section-icon">🔁</div>
+      <h3>Beyond the Round</h3>
       <p>
-        We engage beyond the current round — guiding founders through
-        multi-cycle journeys from capital raise to exit.
+        We partner with founders across cycles —
+        not just to raise capital, but to build enduring companies.
       </p>
     </div>
   </div>
+
+  <div class="center" style="margin-top:2rem">
+    <a href="why-us.html" class="cta-secondary">Why founders choose us →</a>
+  </div>
 </section>
 
-<!-- FOUNDERS PREVIEW -->
-<section id="founders-preview" class="deck-section">
+<!-- FOUNDERS -->
+<section id="founders-preview" class="deck-section" data-section="founders">
   <h2>Leadership</h2>
   <p class="section-subtitle">
     Decades of experience across venture capital, corporate finance, and ecosystem building.
@@ -125,13 +153,10 @@
   <div class="founders-grid">
     <div class="founder-preview-card">
       <div class="founder-photo">
-        <!-- Replace src later -->
-        <img src="assets/founder-placeholder.png" alt="Alok Bajoria" />
+        <img src="assets/founder-placeholder.png" alt="Alok Bajoria" loading="lazy" />
       </div>
       <h3>Alok Bajoria</h3>
-      <p class="founder-title">
-        Former Director, Intel Capital · VC & Corporate Finance
-      </p>
+      <p class="founder-title">Former Director, Intel Capital</p>
       <p class="founder-blurb">
         Managed USD 500M VC portfolio with 90+ exits across IPOs, M&A, and secondary sales.
       </p>
@@ -140,111 +165,124 @@
 
     <div class="founder-preview-card">
       <div class="founder-photo">
-        <img src="assets/founder-placeholder.png" alt="Ashok Chandavarkar" />
+        <img src="assets/founder-placeholder.png" alt="Ashok Chandavarkar" loading="lazy" />
       </div>
       <h3>Ashok Suresh Chandavarkar</h3>
-      <p class="founder-title">
-        Ecosystem Builder · Public–Private Partnerships
-      </p>
+      <p class="founder-title">Ecosystem & Innovation Leader</p>
       <p class="founder-blurb">
-        30+ years driving innovation, entrepreneurship, and scalable, tech-driven impact.
+        30+ years driving entrepreneurship, public–private partnerships,
+        and technology-led impact.
       </p>
       <a href="founders.html" class="founder-link">View full profile →</a>
     </div>
   </div>
 </section>
 
-
-<section id="journey" class="deck-section">
+<!-- JOURNEY -->
+<!-- JOURNEY -->
+<section id="journey-preview" class="deck-section alt-bg" data-section="journey">
   <h2>Fundraising Engagement Journey</h2>
-  <p class="section-subtitle">Typical timeline: 18–30 weeks</p>
+  <p class="section-subtitle">
+    A structured, end-to-end path — from readiness to capital closure.
+  </p>
 
-  <div class="journey-road desktop-only">
-    <div class="road-step">1<br/><span>Readiness</span></div>
-    <div class="road-step">2<br/><span>Strategy</span></div>
-    <div class="road-step">3<br/><span>Targeting</span></div>
-    <div class="road-step">4<br/><span>Investor Calls</span></div>
-    <div class="road-step">5<br/><span>Due Diligence</span></div>
-    <div class="road-step">6<br/><span>Closure</span></div>
+  <!-- DESKTOP -->
+  <div class="journey-wrapper desktop-only">
+    <div class="journey-line-bg"></div>
+
+    <div class="journey-steps">
+      <div class="journey-step-node">
+        <div class="node-icon">📊</div>
+        <h4>Readiness</h4>
+        <p>Business evaluation & capital preparedness</p>
+      </div>
+
+      <div class="journey-step-node">
+        <div class="node-icon">🧠</div>
+        <h4>Strategy</h4>
+        <p>Story, positioning & valuation framing</p>
+      </div>
+
+      <div class="journey-step-node">
+        <div class="node-icon">🎯</div>
+        <h4>Targeting</h4>
+        <p>Investor mapping & outreach sequencing</p>
+      </div>
+
+      <div class="journey-step-node">
+        <div class="node-icon">📞</div>
+        <h4>Engagement</h4>
+        <p>Investor calls, feedback & negotiation</p>
+      </div>
+
+      <div class="journey-step-node">
+        <div class="node-icon">🧾</div>
+        <h4>Due Diligence</h4>
+        <p>Data room & diligence coordination</p>
+      </div>
+
+      <div class="journey-step-node highlight">
+        <div class="node-icon">🏁</div>
+        <h4>Closure</h4>
+        <p>Final documentation & fund transfer</p>
+      </div>
+    </div>
   </div>
 
-  <div class="journey-stepper mobile-only">
-    <div class="step">1. Business evaluation & readiness</div>
-    <div class="step">2. Strategy, story & valuation</div>
-    <div class="step">3. Investor targeting & outreach</div>
-    <div class="step">4. Calls, pitch refinement, TS negotiation</div>
-    <div class="step">5. Data room & DD facilitation</div>
-    <div class="step">6. Fund transfer & closure</div>
+  <!-- MOBILE -->
+  <div class="journey-vertical mobile-only">
+    <div class="journey-step">📊 Readiness</div>
+    <div class="journey-step">🧠 Strategy</div>
+    <div class="journey-step">🎯 Targeting</div>
+    <div class="journey-step">📞 Engagement</div>
+    <div class="journey-step">🧾 Due Diligence</div>
+    <div class="journey-step highlight">🏁 Closure</div>
+  </div>
+
+  <div class="center" style="margin-top:2.5rem">
+    <a href="journey.html" class="cta-button">Explore the full journey →</a>
   </div>
 </section>
 
-<section id="engagement" class="deck-section alt-bg">
+
+<!-- ENGAGEMENT -->
+<section id="engagement" class="deck-section" data-section="engagement">
   <h2>Engagement Model</h2>
   <p class="section-subtitle">
-    A transparent, structured partnership designed for long-term outcomes.
+    Transparent, disciplined partnerships designed for institutional outcomes.
   </p>
 
   <div class="engagement-visual-grid">
-
     <div class="engagement-card">
-      <div class="engagement-icon">🎯</div>
+      <div class="section-icon">🎯</div>
       <h3>Stage & Sector</h3>
-      <p>
-        Early-stage startups with established PMF or customer traction.<br/>
-        Focused on technology-led businesses:
-      </p>
-      <span class="tag">B2B</span>
-      <span class="tag">B2G</span>
-      <span class="tag">B2B2C</span>
+      <p>Early-stage technology companies with PMF or traction.</p>
     </div>
 
     <div class="engagement-card">
-      <div class="engagement-icon">💼</div>
+      <div class="section-icon">💼</div>
       <h3>Funding Rounds</h3>
-      <p>
-        Institutional fundraising support across:
-      </p>
-      <span class="pill">Seed</span>
-      <span class="pill">Pre-Series A</span>
-      <span class="pill">Series A</span>
+      <p>Seed to Series A institutional rounds.</p>
     </div>
 
     <div class="engagement-card highlight">
-      <div class="engagement-icon">💰</div>
+      <div class="section-icon">💰</div>
       <h3>Commercial Model</h3>
       <ul>
-        <li>Retainer fee (upfront)</li>
-        <li>Success fee on closure</li>
-        <li>Out-of-pocket expenses (capped)</li>
+        <li>Retainer fee</li>
+        <li>Success fee</li>
+        <li>Capped expenses</li>
       </ul>
     </div>
+  </div>
 
-    <div class="engagement-card">
-      <div class="engagement-icon">⏳</div>
-      <h3>Engagement Duration</h3>
-      <p class="duration">
-        6 to 12 months
-      </p>
-      <p class="muted">
-        Aligned to fundraising complexity and market conditions.
-      </p>
-    </div>
-
-    <div class="engagement-card muted-card">
-      <div class="engagement-icon">🚫</div>
-      <h3>Out of Scope</h3>
-      <ul>
-        <li>Creating business decks</li>
-        <li>Pitching to investors</li>
-        <li>Legal, tax, or accounting advisory</li>
-      </ul>
-    </div>
-
+  <div class="center" style="margin-top:2rem">
+    <a href="engagement.html" class="cta-secondary">View engagement details →</a>
   </div>
 </section>
 
-
-<section id="login" class="deck-section login-section">
+<!-- LOGIN -->
+<section id="login" class="deck-section login-section alt-bg" data-section="login">
   <h2>Client Login</h2>
 
   <form id="login-form">
@@ -261,9 +299,12 @@
 </main>
 
 <footer>
-  <p>© 2025 NurtuRise Advisors LLP</p>
+  <p>© 2025 NurtuRise Advisors LLP · All rights reserved</p>
 </footer>
 
-<script src="script.js"></script>
+<!-- Scripts -->
+<script src="script.js" defer></script>
+<script type="module" src="firebase-setup.js"></script>
+
 </body>
 </html>

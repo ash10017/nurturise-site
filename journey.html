@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fundraising Journey – NurtuRise Advisors</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<!-- NAVBAR (same everywhere) -->
+<nav class="navbar">
+  <div class="nav-content">
+    <img src="assets/logo.png" class="logo-img" />
+    <button id="menu-toggle">☰</button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="why-us.html">Why Us</a></li>
+      <li><a href="journey.html" class="active">Journey</a></li>
+      <li><a href="engagement.html">Engagement</a></li>
+      <li><a href="founders.html">Founders</a></li>
+    </ul>
+
+    <button id="mode-toggle">🌓</button>
+  </div>
+</nav>
+
+<main class="deck-section">
+
+  <h1 class="center">The Fundraising Journey</h1>
+  <p class="section-subtitle center">
+    A structured, end-to-end operating model from readiness to capital closure.
+  </p>
+
+  <!-- DESKTOP PATH -->
+  <div class="journey-path desktop-only">
+
+    <svg viewBox="0 0 1200 300" class="journey-svg">
+      <path d="M50 150 Q300 50 550 150 T1050 150"
+            class="journey-line" />
+    </svg>
+
+    <div class="journey-node" style="left:5%">
+      <div class="icon">📊</div>
+      <h4>Readiness</h4>
+      <p>Business evaluation & gap analysis</p>
+    </div>
+
+    <div class="journey-node" style="left:22%">
+      <div class="icon">🧠</div>
+      <h4>Strategy</h4>
+      <p>Story, valuation & positioning</p>
+    </div>
+
+    <div class="journey-node" style="left:40%">
+      <div class="icon">🎯</div>
+      <h4>Targeting</h4>
+      <p>Investor mapping & outreach</p>
+    </div>
+
+    <div class="journey-node" style="left:58%">
+      <div class="icon">📞</div>
+      <h4>Engagement</h4>
+      <p>Calls, pitch refinement, TS</p>
+    </div>
+
+    <div class="journey-node" style="left:76%">
+      <div class="icon">🧾</div>
+      <h4>Due Diligence</h4>
+      <p>DD support & issue resolution</p>
+    </div>
+
+    <div class="journey-node" style="left:92%">
+      <div class="icon">🏁</div>
+      <h4>Closure</h4>
+      <p>Documentation & fund transfer</p>
+    </div>
+
+  </div>
+
+  <!-- MOBILE STEPPER -->
+  <div class="journey-stepper mobile-only">
+    <div class="step">📊 Readiness & Evaluation</div>
+    <div class="step">🧠 Strategy & Story</div>
+    <div class="step">🎯 Investor Targeting</div>
+    <div class="step">📞 Investor Engagement</div>
+    <div class="step">🧾 Due Diligence</div>
+    <div class="step">🏁 Capital Closure</div>
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -59,3 +59,66 @@ if (contactForm) {
     contactForm.reset();
   });
 }
+
+// Enhanced animations for key homepage sections
+ScrollReveal().reveal('#value .value-box', {
+  distance: '24px',
+  duration: 800,
+  easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+  origin: 'bottom',
+  interval: 120
+});
+
+ScrollReveal().reveal('#engagement .engagement-card', {
+  distance: '24px',
+  duration: 800,
+  easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+  origin: 'bottom',
+  interval: 120
+});
+
+/* =====================================================
+   ACTIVE SECTION HIGHLIGHT (INDEX PAGE ONLY)
+   ===================================================== */
+
+const pageSections = document.querySelectorAll("section[data-section]");
+const navAnchors = document.querySelectorAll(".nav-links a");
+
+function updateActiveNav() {
+  let currentSection = "";
+
+  pageSections.forEach(section => {
+    const sectionTop = section.offsetTop - 160;
+    if (window.scrollY >= sectionTop) {
+      currentSection = section.getAttribute("data-section");
+    }
+  });
+
+  navAnchors.forEach(link => {
+    link.classList.remove("active");
+
+    if (
+      currentSection &&
+      link.getAttribute("href").includes(currentSection)
+    ) {
+      link.classList.add("active");
+    }
+  });
+
+  // Default to Home when near top
+  if (window.scrollY < 300) {
+    document.querySelector(".nav-home")?.classList.add("active");
+  }
+}
+
+window.addEventListener("scroll", updateActiveNav);
+window.addEventListener("load", updateActiveNav);
+
+ScrollReveal().reveal('.journey-step-node', {
+  distance: '0',
+  scale: 0.92,
+  duration: 900,
+  easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+  interval: 120
+});
+
