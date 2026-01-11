@@ -9,92 +9,107 @@
 
 <body>
 
-<!-- NAVBAR (same everywhere) -->
 <nav class="navbar">
-    <div class="nav-content">
-      <img src="assets/logo.png" class="logo-img" alt="NurtuRise Advisors" />
-  
-      <button id="menu-toggle">☰</button>
-  
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="nav-home active">Home</a></li>
-        <li><a href="philosophy.html">Philosophy</a></li>
-        <li><a href="why-us.html">Why Us</a></li>
-        <li><a href="journey.html">Journey</a></li>
-        <li><a href="engagement.html">Engagement</a></li>
-        <li><a href="case-studies.html">Case Studies</a></li>
-        <li><a href="founders.html">Founders</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-  
-      <button id="mode-toggle">🌓</button>
-    </div>
-  </nav>
-
-<main class="deck-section">
-
-  <h1 class="center">The Fundraising Journey</h1>
-  <p class="section-subtitle center">
-    A structured, end-to-end operating model from readiness to capital closure.
-  </p>
-
-  <!-- DESKTOP PATH -->
-  <div class="journey-path desktop-only">
-
-    <svg viewBox="0 0 1200 300" class="journey-svg">
-      <path d="M50 150 Q300 50 550 150 T1050 150"
-            class="journey-line" />
-    </svg>
-
-    <div class="journey-node" style="left:5%">
-      <div class="icon">📊</div>
-      <h4>Readiness</h4>
-      <p>Business evaluation & gap analysis</p>
-    </div>
-
-    <div class="journey-node" style="left:22%">
-      <div class="icon">🧠</div>
-      <h4>Strategy</h4>
-      <p>Story, valuation & positioning</p>
-    </div>
-
-    <div class="journey-node" style="left:40%">
-      <div class="icon">🎯</div>
-      <h4>Targeting</h4>
-      <p>Investor mapping & outreach</p>
-    </div>
-
-    <div class="journey-node" style="left:58%">
-      <div class="icon">📞</div>
-      <h4>Engagement</h4>
-      <p>Calls, pitch refinement, TS</p>
-    </div>
-
-    <div class="journey-node" style="left:76%">
-      <div class="icon">🧾</div>
-      <h4>Due Diligence</h4>
-      <p>DD support & issue resolution</p>
-    </div>
-
-    <div class="journey-node" style="left:92%">
-      <div class="icon">🏁</div>
-      <h4>Closure</h4>
-      <p>Documentation & fund transfer</p>
-    </div>
-
+  <div class="nav-content">
+    <img src="assets/logo.png" class="logo-img" />
+    <button id="menu-toggle">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="why-us.html">Why Us</a></li>
+      <li><a href="journey.html" class="active">Journey</a></li>
+      <li><a href="engagement.html">Engagement</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="founders.html">Founders</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+    <button id="mode-toggle">🌓</button>
   </div>
+</nav>
 
-  <!-- MOBILE STEPPER -->
-  <div class="journey-stepper mobile-only">
-    <div class="step">📊 Readiness & Evaluation</div>
-    <div class="step">🧠 Strategy & Story</div>
-    <div class="step">🎯 Investor Targeting</div>
-    <div class="step">📞 Investor Engagement</div>
-    <div class="step">🧾 Due Diligence</div>
-    <div class="step">🏁 Capital Closure</div>
-  </div>
+<main class="journey-shell">
 
-</main>
+    <header class="journey-header">
+      <h1>Engagement Process & Timelines</h1>
+      <p>
+        Focus areas during fund raise · Typical engagement timeline:
+        <strong>18–30 weeks</strong>
+      </p>
+    </header>
+  
+    <!-- TOP ROW -->
+    <section class="journey-row">
+      <div class="journey-card">
+        <span class="stage-index purple">1</span>
+        <h3>Business Evaluation</h3>
+        <ul>
+          <li>Readiness check</li>
+          <li>Gap assessment</li>
+        </ul>
+        <span class="timeline">2–4 weeks</span>
+      </div>
+  
+      <div class="journey-card">
+        <span class="stage-index blue">2</span>
+        <h3>Fundraising Strategy</h3>
+        <ul>
+          <li>Story crafting / pitch</li>
+          <li>Valuation guidance</li>
+        </ul>
+        <span class="timeline">2–4 weeks</span>
+      </div>
+  
+      <div class="journey-card">
+        <span class="stage-index teal">3</span>
+        <h3>Investor Targeting</h3>
+        <ul>
+          <li>Introductions & network</li>
+          <li>Managing outreach</li>
+        </ul>
+        <span class="timeline">2–4 weeks</span>
+      </div>
+    </section>
+  
+    <div class="journey-divider"></div>
+  
+    <!-- BOTTOM ROW -->
+    <section class="journey-row">
+      <div class="journey-card">
+        <span class="stage-index green">4</span>
+        <h3>Investor Engagement</h3>
+        <ul>
+          <li>Investor calls</li>
+          <li>Pitch refinement</li>
+          <li>TS negotiation</li>
+        </ul>
+        <span class="timeline">2–4 weeks</span>
+      </div>
+  
+      <div class="journey-card">
+        <span class="stage-index orange">5</span>
+        <h3>Due Diligence</h3>
+        <ul>
+          <li>Data room readiness</li>
+          <li>DD facilitation</li>
+          <li>Issue resolution</li>
+        </ul>
+        <span class="timeline">4–6 weeks</span>
+      </div>
+  
+      <div class="journey-card highlight">
+        <span class="stage-index red">6</span>
+        <h3>Closure</h3>
+        <ul>
+          <li>Final documentation</li>
+          <li>Fund transfer</li>
+          <li>Success fee</li>
+        </ul>
+        <span class="timeline">6–8 weeks</span>
+      </div>
+    </section>
+  
+  </main>
+  
 
 <script src="script.js"></script>
 </body>

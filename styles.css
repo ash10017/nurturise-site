@@ -817,3 +817,100 @@ body.dark .login-card input {
 .link-btn:hover {
   text-decoration: underline;
 }
+/* ===========================
+   WORLD-CLASS JOURNEY DESIGN
+=========================== */
+
+.journey-shell {
+  padding: 5rem 2rem 6rem;
+  background: linear-gradient(180deg, #2a0a3d, #0b1533);
+  color: #fff;
+}
+
+.journey-header {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.journey-header h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.journey-header p {
+  opacity: 0.9;
+}
+
+.journey-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.journey-divider {
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    rgba(214, 226, 111, 0),
+    rgba(214, 226, 111, 0.8),
+    rgba(214, 226, 111, 0)
+  );
+  margin: 4rem auto;
+  max-width: 900px;
+}
+
+/* CARDS */
+
+.journey-card {
+  background: rgba(0,0,0,0.55);
+  border-radius: 18px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+}
+
+.journey-card h3 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.journey-card ul {
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.timeline {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 700;
+  color: #ffd84d;
+}
+
+/* STAGE INDEX */
+
+.stage-index {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* COLORS */
+.purple { background: #9b4dcc; }
+.blue { background: #4c7cf0; }
+.teal { background: #2fb5a9; }
+.green { background: #7fcf3f; }
+.orange { background: #f3b233; }
+.red { background: #f05454; }
+
+/* HIGHLIGHT FINAL */
+.journey-card.highlight {
+  outline: 2px solid rgba(255,255,255,0.2);
+}
