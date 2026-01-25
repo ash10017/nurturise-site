@@ -40,19 +40,29 @@ body.dark {
 }
 
 .nav-content {
-  max-width: 1100px;
+  max-width: 1400px;          /* was 1100px */
   margin: auto;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1.25rem;  /* slightly more breathing room */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
+
 .logo-img {
-  width: 180px;
-  height: auto;
+  height: 56px;       /* was probably ~36–40px */
+  width: auto;
+  transition: transform 0.3s ease;
+  margin-left: -0.5rem; 
 }
+
+@media (max-width: 768px) {
+  .logo-img {
+    height: 46px;
+  }
+}
+
 
 #menu-toggle,
 #mode-toggle {
@@ -101,6 +111,24 @@ body.dark {
     right: 0;
   }
 }
+
+
+
+body.dark {
+  background-color: #0b1533;
+  color: #ffffff;
+}
+
+body.dark .navbar,
+body.dark .deck-section,
+body.dark footer {
+  background-color: transparent;
+}
+
+body.dark .journey-shell {
+  background: linear-gradient(180deg, #14061f, #050a1a);
+}
+
 
 /* HERO */
 .hero-deck {
