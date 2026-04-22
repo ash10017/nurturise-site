@@ -4,79 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Engagement Model – NurtuRise Advisors</title>
+  <meta name="description" content="A transparent, structured advisory partnership — stage focus, funding scope, and commercial terms." />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/scrollreveal@4/dist/scrollreveal.min.js"></script>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-content">
-          <img src="assets/logo.png" class="logo-img" alt="NurtuRise Advisors" />
-      
-          <button id="menu-toggle">☰</button>
-      
-          <ul class="nav-links" id="nav-links">
-            <li><a href="index.html" class="nav-home active">Home</a></li>
-            <li><a href="philosophy.html">Philosophy</a></li>
-            <li><a href="why-us.html">Why Us</a></li>
-            <li><a href="engagement.html">Engagement</a></li>
-            <li><a href="journey.html">Journey</a></li>
-            <!--
-<li><a href="case-studies.html">Case Studies</a></li>
--->
-            <li><a href="founders.html">Founders</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-      
-          <button id="mode-toggle">🌓</button>
-        </div>
-      </nav>
-
-<main class="deck-section">
-  <h1 class="center">Engagement Model</h1>
-  <p class="section-subtitle center">
-    A transparent, structured advisory partnership.
-  </p>
-
-  <div class="engagement-visual-grid">
-    <div class="engagement-card">
-      <h3>Stage & Sector</h3>
-      <p>Early-stage technology companies with PMF or traction.</p>
-    </div>
-
-    <div class="engagement-card">
-      <h3>Funding Rounds</h3>
-      <p>Seed to Series A institutional rounds.</p>
-    </div>
-
-    <div class="engagement-card highlight">
-      <h3>Commercial Model</h3>
-      <ul>
-        <li>Retainer fee</li>
-        <li>Success fee</li>
-        <li>Capped expenses</li>
-      </ul>
-    </div>
-
-    <div class="engagement-card">
-      <h3>Duration</h3>
-      <p class="duration">6–12 months</p>
-    </div>
-
-    <div class="engagement-card muted-card">
-      <h3>Out of Scope</h3>
-      <ul>
-        <li>Deck creation</li>
-        <li>Investor pitching</li>
-        <li>Legal or tax advisory</li>
-      </ul>
-    </div>
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-content">
+    <a href="index.html" aria-label="NurtuRise Advisors Home">
+      <img src="assets/logo.png" class="logo-img" alt="NurtuRise Advisors" />
+    </a>
+    <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="nav-home">Home</a></li>
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="why-us.html">Why Us</a></li>
+      <li><a href="engagement.html" class="active">Engagement</a></li>
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="founders.html">Founders</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <button id="mode-toggle" aria-label="Toggle dark mode">🌓</button>
   </div>
+</nav>
+
+<header class="page-hero">
+  <div class="page-hero-content">
+    <h1>Engagement Model</h1>
+    <p>A transparent, structured advisory partnership designed for institutional outcomes.</p>
+  </div>
+</header>
+
+<main>
+  <section class="deck-section">
+    <div class="engagement-visual-grid">
+      <div class="engagement-card deck-card">
+        <div class="section-icon">🎯</div>
+        <h3>Stage &amp; Sector</h3>
+        <p>Early-stage technology companies with PMF or traction.</p>
+      </div>
+
+      <div class="engagement-card deck-card">
+        <div class="section-icon">💼</div>
+        <h3>Funding Rounds</h3>
+        <p>Seed to Series A institutional rounds.</p>
+      </div>
+
+      <div class="engagement-card deck-card highlight">
+        <div class="section-icon">💰</div>
+        <h3>Commercial Model</h3>
+        <ul>
+          <li>Retainer fee</li>
+          <li>Success fee</li>
+          <li>Capped expenses</li>
+        </ul>
+      </div>
+
+      <div class="engagement-card deck-card">
+        <div class="section-icon">⏱️</div>
+        <h3>Duration</h3>
+        <span class="duration">6–12 mo</span>
+      </div>
+
+      <div class="engagement-card deck-card muted-card">
+        <div class="section-icon">🚫</div>
+        <h3>Out of Scope</h3>
+        <ul>
+          <li>Deck creation</li>
+          <li>Investor pitching</li>
+          <li>Legal or tax advisory</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
-  <p>© 2025 NurtuRise Advisors LLP</p>
+  <p>© 2025 NurtuRise Advisors LLP · All rights reserved</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

@@ -4,72 +4,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Philosophy – NurtuRise Advisors</title>
+  <meta name="description" content="The vision, mission, and operating principles behind NurtuRise Advisors." />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/scrollreveal@4/dist/scrollreveal.min.js"></script>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-content">
-          <img src="assets/logo.png" class="logo-img" alt="NurtuRise Advisors" />
-      
-          <button id="menu-toggle">☰</button>
-      
-          <ul class="nav-links" id="nav-links">
-            <li><a href="index.html" class="nav-home active">Home</a></li>
-            <li><a href="philosophy.html">Philosophy</a></li>
-            <li><a href="why-us.html">Why Us</a></li>
-            <li><a href="engagement.html">Engagement</a></li>
-            <li><a href="journey.html">Journey</a></li>
-            <!--
-<li><a href="case-studies.html">Case Studies</a></li>
--->
-            <li><a href="founders.html">Founders</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-      
-          <button id="mode-toggle">🌓</button>
-        </div>
-      </nav>
-
-<main class="deck-section">
-  <h1 class="center">Our Philosophy</h1>
-  <p class="section-subtitle center">
-    How we think about founders, capital, and long-term value creation.
-  </p>
-
-  <div class="triple-grid">
-    <div class="deck-card">
-      <h3>Vision</h3>
-      <p>
-        To be a trusted strategic partner enabling founders to unlock
-        transformative growth through capital, insight, and connections.
-      </p>
-    </div>
-
-    <div class="deck-card">
-      <h3>Mission</h3>
-      <p>
-        To nurture early-stage ventures through disciplined advisory
-        and institutional capital access.
-      </p>
-    </div>
-
-    <div class="deck-card">
-      <h3>Operating Principles</h3>
-      <ul>
-        <li>Founder–investor alignment</li>
-        <li>Ethics & transparency</li>
-        <li>Capital with context</li>
-        <li>Long-term orientation</li>
-      </ul>
-    </div>
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-content">
+    <a href="index.html" aria-label="NurtuRise Advisors Home">
+      <img src="assets/logo.png" class="logo-img" alt="NurtuRise Advisors" />
+    </a>
+    <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="nav-home">Home</a></li>
+      <li><a href="philosophy.html" class="active">Philosophy</a></li>
+      <li><a href="why-us.html">Why Us</a></li>
+      <li><a href="engagement.html">Engagement</a></li>
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="founders.html">Founders</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <button id="mode-toggle" aria-label="Toggle dark mode">🌓</button>
   </div>
+</nav>
+
+<header class="page-hero">
+  <div class="page-hero-content">
+    <h1>Our Philosophy</h1>
+    <p>How we think about founders, capital, and long-term value creation.</p>
+  </div>
+</header>
+
+<main>
+  <section class="deck-section">
+    <div class="triple-grid">
+      <div class="deck-card">
+        <div class="section-icon">🧭</div>
+        <h3>Vision</h3>
+        <p>
+          To be a trusted strategic partner enabling founders to unlock
+          transformative growth through capital, insight, and connections.
+        </p>
+      </div>
+
+      <div class="deck-card">
+        <div class="section-icon">🚀</div>
+        <h3>Mission</h3>
+        <p>
+          To nurture early-stage ventures through disciplined advisory
+          and institutional capital access.
+        </p>
+      </div>
+
+      <div class="deck-card">
+        <div class="section-icon">⚖️</div>
+        <h3>Operating Principles</h3>
+        <ul>
+          <li>Founder–investor alignment</li>
+          <li>Ethics &amp; transparency</li>
+          <li>Capital with context</li>
+          <li>Long-term orientation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
-  <p>© 2025 NurtuRise Advisors LLP</p>
+  <p>© 2025 NurtuRise Advisors LLP · All rights reserved</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

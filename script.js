@@ -1,58 +1,49 @@
-// ScrollReveal animations
-ScrollReveal().reveal('.deck-section', {
-  distance: '40px',
-  duration: 900,
-  easing: 'ease-out',
-  origin: 'bottom',
-  interval: 120
-});
-
-// Mobile menu toggle
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
-
-if (menuToggle) {
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
+// Navbar scroll shadow
+const navbar = document.querySelector('.navbar');
+if (navbar) {
+  const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 }
 
-// Close mobile menu on link click
-if (navLinks) {
-  navLinks.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
-    });
+// Mobile menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks   = document.getElementById('nav-links');
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuToggle.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('active'));
   });
 }
 
 // Dark mode toggle
-const modeToggle = document.getElementById("mode-toggle");
-
+const modeToggle = document.getElementById('mode-toggle');
 if (modeToggle) {
-  modeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    localStorage.setItem(
-      "theme",
-      document.body.classList.contains("dark") ? "dark" : "light"
-    );
+  modeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
   });
 }
 
-// Load saved theme
-window.addEventListener("load", () => {
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark");
+// Load saved theme on page load
+window.addEventListener('load', () => {
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark');
   }
 });
 
 // Contact form (if present)
-const contactForm = document.getElementById("contact-form");
+const contactForm = document.getElementById('contact-form');
 if (contactForm) {
-  contactForm.addEventListener("submit", e => {
+  contactForm.addEventListener('submit', e => {
     e.preventDefault();
     if (!contactForm.checkValidity()) {
-      alert("Please fill all required fields.");
+      alert('Please fill all required fields.');
       return;
     }
     alert("Thanks for reaching out. We'll be in touch!");
@@ -60,73 +51,51 @@ if (contactForm) {
   });
 }
 
-// Enhanced animations for key homepage sections
-ScrollReveal().reveal('#value .value-box', {
-  distance: '24px',
-  duration: 800,
-  easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
-  origin: 'bottom',
-  interval: 120
-});
+// ScrollReveal animations (guard against pages that don't load the library)
+if (typeof ScrollReveal !== 'undefined') {
+  const sr = ScrollReveal({
+    distance: '28px',
+    duration: 860,
+    easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+    origin: 'bottom',
+    reset: false,
+  });
 
-ScrollReveal().reveal('#engagement .engagement-card', {
-  distance: '24px',
-  duration: 800,
-  easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
-  origin: 'bottom',
-  interval: 120
-});
+  sr.reveal('.deck-section', { interval: 80 });
+  sr.reveal('#value .value-box', { interval: 110 });
+  sr.reveal('#engagement .engagement-card', { interval: 110 });
+  sr.reveal('.journey-step-node', { distance: '0', scale: 0.93, interval: 110 });
+  sr.reveal('.contact-card', { interval: 130 });
+  sr.reveal('.founder-preview-card', { interval: 130 });
+  sr.reveal('.founder-full-card', { interval: 130 });
+  sr.reveal('.journey-card', { interval: 100 });
+}
 
-/* =====================================================
-   ACTIVE SECTION HIGHLIGHT (INDEX PAGE ONLY)
-   ===================================================== */
-
-const pageSections = document.querySelectorAll("section[data-section]");
-const navAnchors = document.querySelectorAll(".nav-links a");
+// Active section highlight (home page scroll spy)
+const pageSections = document.querySelectorAll('section[data-section]');
+const navAnchors   = document.querySelectorAll('.nav-links a');
 
 function updateActiveNav() {
-  let currentSection = "";
-
+  let currentSection = '';
   pageSections.forEach(section => {
-    const sectionTop = section.offsetTop - 160;
-    if (window.scrollY >= sectionTop) {
-      currentSection = section.getAttribute("data-section");
+    if (window.scrollY >= section.offsetTop - 160) {
+      currentSection = section.getAttribute('data-section');
     }
   });
 
   navAnchors.forEach(link => {
-    link.classList.remove("active");
-
-    if (
-      currentSection &&
-      link.getAttribute("href").includes(currentSection)
-    ) {
-      link.classList.add("active");
+    link.classList.remove('active');
+    if (currentSection && link.getAttribute('href')?.includes(currentSection)) {
+      link.classList.add('active');
     }
   });
 
-  // Default to Home when near top
   if (window.scrollY < 300) {
-    document.querySelector(".nav-home")?.classList.add("active");
+    document.querySelector('.nav-home')?.classList.add('active');
   }
 }
 
-window.addEventListener("scroll", updateActiveNav);
-window.addEventListener("load", updateActiveNav);
-
-ScrollReveal().reveal('.journey-step-node', {
-  distance: '0',
-  scale: 0.92,
-  duration: 900,
-  easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
-  interval: 120
-});
-
-ScrollReveal().reveal('.contact-card', {
-  distance: '24px',
-  duration: 900,
-  easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
-  origin: 'bottom',
-  interval: 150
-});
-
+if (pageSections.length) {
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+  window.addEventListener('load', updateActiveNav);
+}

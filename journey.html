@@ -4,115 +4,119 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fundraising Journey – NurtuRise Advisors</title>
+  <meta name="description" content="A structured, six-stage fundraising process from business evaluation through to closure — 18–30 weeks." />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/scrollreveal@4/dist/scrollreveal.min.js"></script>
 </head>
 
 <body>
 
-<nav class="navbar">
+<nav class="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-content">
-    <img src="assets/logo.png" class="logo-img" />
-    <button id="menu-toggle">☰</button>
+    <a href="index.html" aria-label="NurtuRise Advisors Home">
+      <img src="assets/logo.png" class="logo-img" alt="NurtuRise Advisors" />
+    </a>
+    <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
     <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" class="nav-home">Home</a></li>
       <li><a href="philosophy.html">Philosophy</a></li>
       <li><a href="why-us.html">Why Us</a></li>
       <li><a href="engagement.html">Engagement</a></li>
       <li><a href="journey.html" class="active">Journey</a></li>
-      <!--
-<li><a href="case-studies.html">Case Studies</a></li>
--->
       <li><a href="founders.html">Founders</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
-    <button id="mode-toggle">🌓</button>
+    <button id="mode-toggle" aria-label="Toggle dark mode">🌓</button>
   </div>
 </nav>
 
 <main class="journey-shell">
 
-    <header class="journey-header">
-      <h1>Engagement Process & Timelines</h1>
-      <p>
-        Focus areas during fund raise · Typical engagement timeline:
-        <strong>18–30 weeks</strong>
-      </p>
-    </header>
-  
-    <!-- TOP ROW -->
-    <section class="journey-row">
-      <div class="journey-card">
-        <span class="stage-index purple">1</span>
-        <h3>Business Evaluation</h3>
-        <ul>
-          <li>Readiness check</li>
-          <li>Gap assessment</li>
-        </ul>
-        <span class="timeline">2–4 weeks</span>
-      </div>
-  
-      <div class="journey-card">
-        <span class="stage-index blue">2</span>
-        <h3>Fundraising Strategy</h3>
-        <ul>
-          <li>Story crafting / pitch</li>
-          <li>Valuation guidance</li>
-        </ul>
-        <span class="timeline">2–4 weeks</span>
-      </div>
-  
-      <div class="journey-card">
-        <span class="stage-index teal">3</span>
-        <h3>Investor Targeting</h3>
-        <ul>
-          <li>Introductions & network</li>
-          <li>Managing outreach</li>
-        </ul>
-        <span class="timeline">2–4 weeks</span>
-      </div>
-    </section>
-  
-    <div class="journey-divider"></div>
-  
-    <!-- BOTTOM ROW -->
-    <section class="journey-row">
-      <div class="journey-card">
-        <span class="stage-index green">4</span>
-        <h3>Investor Engagement</h3>
-        <ul>
-          <li>Investor calls</li>
-          <li>Pitch refinement</li>
-          <li>TS negotiation</li>
-        </ul>
-        <span class="timeline">2–4 weeks</span>
-      </div>
-  
-      <div class="journey-card">
-        <span class="stage-index orange">5</span>
-        <h3>Due Diligence</h3>
-        <ul>
-          <li>Data room readiness</li>
-          <li>DD facilitation</li>
-          <li>Issue resolution</li>
-        </ul>
-        <span class="timeline">4–6 weeks</span>
-      </div>
-  
-      <div class="journey-card highlight">
-        <span class="stage-index red">6</span>
-        <h3>Closure</h3>
-        <ul>
-          <li>Final documentation</li>
-          <li>Fund transfer</li>
-          <li>Success fee</li>
-        </ul>
-        <span class="timeline">6–8 weeks</span>
-      </div>
-    </section>
-  
-  </main>
-  
+  <header class="journey-header">
+    <h1>Engagement Process &amp; Timelines</h1>
+    <p>
+      Focus areas during fund raise · Typical engagement timeline:
+      <strong>18–30 weeks</strong>
+    </p>
+  </header>
 
-<script src="script.js"></script>
+  <!-- TOP ROW -->
+  <section class="journey-row" aria-label="Phases 1–3">
+    <div class="journey-card">
+      <span class="stage-index purple" aria-label="Phase 1">1</span>
+      <h3>Business Evaluation</h3>
+      <ul>
+        <li>Readiness check</li>
+        <li>Gap assessment</li>
+      </ul>
+      <span class="timeline">2–4 weeks</span>
+    </div>
+
+    <div class="journey-card">
+      <span class="stage-index blue" aria-label="Phase 2">2</span>
+      <h3>Fundraising Strategy</h3>
+      <ul>
+        <li>Story crafting / pitch</li>
+        <li>Valuation guidance</li>
+      </ul>
+      <span class="timeline">2–4 weeks</span>
+    </div>
+
+    <div class="journey-card">
+      <span class="stage-index teal" aria-label="Phase 3">3</span>
+      <h3>Investor Targeting</h3>
+      <ul>
+        <li>Introductions &amp; network</li>
+        <li>Managing outreach</li>
+      </ul>
+      <span class="timeline">2–4 weeks</span>
+    </div>
+  </section>
+
+  <div class="journey-divider" role="separator"></div>
+
+  <!-- BOTTOM ROW -->
+  <section class="journey-row" aria-label="Phases 4–6">
+    <div class="journey-card">
+      <span class="stage-index green" aria-label="Phase 4">4</span>
+      <h3>Investor Engagement</h3>
+      <ul>
+        <li>Investor calls</li>
+        <li>Pitch refinement</li>
+        <li>TS negotiation</li>
+      </ul>
+      <span class="timeline">2–4 weeks</span>
+    </div>
+
+    <div class="journey-card">
+      <span class="stage-index orange" aria-label="Phase 5">5</span>
+      <h3>Due Diligence</h3>
+      <ul>
+        <li>Data room readiness</li>
+        <li>DD facilitation</li>
+        <li>Issue resolution</li>
+      </ul>
+      <span class="timeline">4–6 weeks</span>
+    </div>
+
+    <div class="journey-card highlight">
+      <span class="stage-index red" aria-label="Phase 6">6</span>
+      <h3>Closure</h3>
+      <ul>
+        <li>Final documentation</li>
+        <li>Fund transfer</li>
+        <li>Success fee</li>
+      </ul>
+      <span class="timeline">6–8 weeks</span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="dark-footer">
+  <p>© 2025 NurtuRise Advisors LLP · All rights reserved</p>
+</footer>
+
+<script src="script.js" defer></script>
 </body>
 </html>

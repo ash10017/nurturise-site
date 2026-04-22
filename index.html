@@ -9,21 +9,28 @@
   <meta name="description" content="NurtuRise Advisors is a strategic capital advisory firm partnering with founders from Seed to Series A to unlock long-term value through institutional capital." />
   <meta name="author" content="NurtuRise Advisors LLP" />
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="NurtuRise Advisors" />
+  <meta property="og:description" content="Strategic capital advisory for Seed to Series A founders." />
+  <meta property="og:type" content="website" />
+
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 
   <!-- Libraries -->
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://unpkg.com/scrollreveal@4/dist/scrollreveal.min.js"></script>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar">
+<nav class="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-content">
-    <img src="assets/logo.png" class="logo-img" alt="NurtuRise Advisors" />
+    <a href="index.html" aria-label="NurtuRise Advisors Home">
+      <img src="assets/logo.png" class="logo-img" alt="NurtuRise Advisors" />
+    </a>
 
-    <button id="menu-toggle">☰</button>
+    <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
 
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html" class="nav-home active">Home</a></li>
@@ -31,15 +38,11 @@
       <li><a href="why-us.html">Why Us</a></li>
       <li><a href="engagement.html">Engagement</a></li>
       <li><a href="journey.html">Journey</a></li>
-      <!--
-<li><a href="case-studies.html">Case Studies</a></li>
--->
-      
       <li><a href="founders.html">Founders</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
 
-    <button id="mode-toggle">🌓</button>
+    <button id="mode-toggle" aria-label="Toggle dark mode">🌓</button>
   </div>
 </nav>
 
@@ -48,7 +51,7 @@
   <div class="hero-content">
     <h1>
       The Perfect Bridge Between<br/>
-      Startups & Institutional Capital
+      Startups &amp; Institutional Capital
     </h1>
 
     <p>
@@ -62,7 +65,7 @@
     </div>
 
     <span class="hero-footnote">
-      Founded July 2025 · Alok Bajoria & Ashok Chandavarkar
+      Founded July 2025 · Alok Bajoria &amp; Ashok Chandavarkar
     </span>
   </div>
 </header>
@@ -72,6 +75,9 @@
 <!-- PHILOSOPHY -->
 <section id="vision" class="deck-section" data-section="vision">
   <h2>Our Philosophy</h2>
+  <p class="section-subtitle">
+    How we think about founders, capital, and long-term value creation.
+  </p>
 
   <div class="triple-grid">
     <div class="deck-card">
@@ -98,53 +104,58 @@
       <ul>
         <li>Founder–investor alignment</li>
         <li>Long-term orientation</li>
-        <li>Ethics & transparency</li>
+        <li>Ethics &amp; transparency</li>
         <li>Capital with context</li>
       </ul>
     </div>
   </div>
 
-  <div class="center" style="margin-top:2rem">
+  <div class="center" style="margin-top:2.5rem">
     <a href="philosophy.html" class="cta-secondary">Explore our philosophy →</a>
   </div>
 </section>
 
 <!-- WHY US -->
-<section id="value" class="deck-section alt-bg" data-section="value">
-  <h2>Why NurtuRise</h2>
+<div class="section-band alt-bg">
+  <section id="value" class="deck-section" data-section="value">
+    <h2>Why NurtuRise</h2>
+    <p class="section-subtitle">
+      Experience, networks, and a partnership mindset built for outcomes.
+    </p>
 
-  <div class="value-grid">
-    <div class="value-box">
-      <div class="section-icon">🏛️</div>
-      <h3>Deep Experience</h3>
-      <p>
-        60+ years across venture capital, IPOs, M&A, and institutional fundraising.
-      </p>
+    <div class="value-grid">
+      <div class="value-box">
+        <div class="section-icon">🏛️</div>
+        <h3>Deep Experience</h3>
+        <p>
+          60+ years across venture capital, IPOs, M&amp;A, and institutional fundraising.
+        </p>
+      </div>
+
+      <div class="value-box">
+        <div class="section-icon">🌐</div>
+        <h3>Institutional Networks</h3>
+        <p>
+          Trusted relationships with angels, VCs, PE funds,
+          accelerators, and ecosystem partners.
+        </p>
+      </div>
+
+      <div class="value-box">
+        <div class="section-icon">🔁</div>
+        <h3>Beyond the Round</h3>
+        <p>
+          We partner with founders across cycles —
+          not just to raise capital, but to build enduring companies.
+        </p>
+      </div>
     </div>
 
-    <div class="value-box">
-      <div class="section-icon">🌐</div>
-      <h3>Institutional Networks</h3>
-      <p>
-        Trusted relationships with angels, VCs, PE funds,
-        accelerators, and ecosystem partners.
-      </p>
+    <div class="center" style="margin-top:2.5rem">
+      <a href="why-us.html" class="cta-secondary">Why founders choose us →</a>
     </div>
-
-    <div class="value-box">
-      <div class="section-icon">🔁</div>
-      <h3>Beyond the Round</h3>
-      <p>
-        We partner with founders across cycles —
-        not just to raise capital, but to build enduring companies.
-      </p>
-    </div>
-  </div>
-
-  <div class="center" style="margin-top:2rem">
-    <a href="why-us.html" class="cta-secondary">Why founders choose us →</a>
-  </div>
-</section>
+  </section>
+</div>
 
 <!-- FOUNDERS -->
 <section id="founders-preview" class="deck-section" data-section="founders">
@@ -154,24 +165,24 @@
   </p>
 
   <div class="founders-grid">
-    <div class="founder-preview-card">
+    <div class="founder-preview-card deck-card">
       <div class="founder-photo">
         <img src="assets/Alok.jpeg" alt="Alok Bajoria" loading="lazy" />
       </div>
       <h3>Alok Bajoria</h3>
       <p class="founder-title">Former Director, Intel Capital</p>
       <p class="founder-blurb">
-        Managed USD 500M VC portfolio with 90+ exits across IPOs, M&A, and secondary sales.
+        Managed USD 500M VC portfolio with 90+ exits across IPOs, M&amp;A, and secondary sales.
       </p>
       <a href="founders.html" class="founder-link">View full profile →</a>
     </div>
 
-    <div class="founder-preview-card">
+    <div class="founder-preview-card deck-card">
       <div class="founder-photo">
         <img src="assets/Ashok.JPG" alt="Ashok Chandavarkar" loading="lazy" />
       </div>
       <h3>Ashok Suresh Chandavarkar</h3>
-      <p class="founder-title">Ecosystem & Innovation Leader</p>
+      <p class="founder-title">Ecosystem &amp; Innovation Leader</p>
       <p class="founder-blurb">
         30+ years driving entrepreneurship, public–private partnerships,
         and technology-led impact.
@@ -182,71 +193,71 @@
 </section>
 
 <!-- JOURNEY -->
-<!-- JOURNEY -->
-<section id="journey-preview" class="deck-section alt-bg" data-section="journey">
-  <h2>Fundraising Engagement Journey</h2>
-  <p class="section-subtitle">
-    A structured, end-to-end path — from readiness to capital closure.
-  </p>
+<div class="section-band alt-bg">
+  <section id="journey-preview" class="deck-section" data-section="journey">
+    <h2>Fundraising Engagement Journey</h2>
+    <p class="section-subtitle">
+      A structured, end-to-end path — from readiness to capital closure.
+    </p>
 
-  <!-- DESKTOP -->
-  <div class="journey-wrapper desktop-only">
-    <div class="journey-line-bg"></div>
+    <!-- DESKTOP -->
+    <div class="journey-wrapper desktop-only">
+      <div class="journey-line-bg"></div>
 
-    <div class="journey-steps">
-      <div class="journey-step-node">
-        <div class="node-icon">📊</div>
-        <h4>Readiness</h4>
-        <p>Business evaluation & capital preparedness</p>
-      </div>
+      <div class="journey-steps">
+        <div class="journey-step-node">
+          <div class="node-icon">📊</div>
+          <h4>Readiness</h4>
+          <p>Business evaluation &amp; capital preparedness</p>
+        </div>
 
-      <div class="journey-step-node">
-        <div class="node-icon">🧠</div>
-        <h4>Strategy</h4>
-        <p>Story, positioning & valuation framing</p>
-      </div>
+        <div class="journey-step-node">
+          <div class="node-icon">🧠</div>
+          <h4>Strategy</h4>
+          <p>Story, positioning &amp; valuation framing</p>
+        </div>
 
-      <div class="journey-step-node">
-        <div class="node-icon">🎯</div>
-        <h4>Targeting</h4>
-        <p>Investor mapping & outreach sequencing</p>
-      </div>
+        <div class="journey-step-node">
+          <div class="node-icon">🎯</div>
+          <h4>Targeting</h4>
+          <p>Investor mapping &amp; outreach sequencing</p>
+        </div>
 
-      <div class="journey-step-node">
-        <div class="node-icon">📞</div>
-        <h4>Engagement</h4>
-        <p>Investor calls, feedback & negotiation</p>
-      </div>
+        <div class="journey-step-node">
+          <div class="node-icon">📞</div>
+          <h4>Engagement</h4>
+          <p>Investor calls, feedback &amp; negotiation</p>
+        </div>
 
-      <div class="journey-step-node">
-        <div class="node-icon">🧾</div>
-        <h4>Due Diligence</h4>
-        <p>Data room & diligence coordination</p>
-      </div>
+        <div class="journey-step-node">
+          <div class="node-icon">🧾</div>
+          <h4>Due Diligence</h4>
+          <p>Data room &amp; diligence coordination</p>
+        </div>
 
-      <div class="journey-step-node highlight">
-        <div class="node-icon">🏁</div>
-        <h4>Closure</h4>
-        <p>Final documentation & fund transfer</p>
+        <div class="journey-step-node highlight">
+          <div class="node-icon">🏁</div>
+          <h4>Closure</h4>
+          <p>Final documentation &amp; fund transfer</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- MOBILE -->
-  <div class="journey-vertical mobile-only">
-    <div class="journey-step">📊 Readiness</div>
-    <div class="journey-step">🧠 Strategy</div>
-    <div class="journey-step">🎯 Targeting</div>
-    <div class="journey-step">📞 Engagement</div>
-    <div class="journey-step">🧾 Due Diligence</div>
-    <div class="journey-step highlight">🏁 Closure</div>
-  </div>
+    <!-- MOBILE -->
+    <div class="journey-vertical mobile-only">
+      <div class="journey-step">📊 Readiness</div>
+      <div class="journey-step">🧠 Strategy</div>
+      <div class="journey-step">🎯 Targeting</div>
+      <div class="journey-step">📞 Engagement</div>
+      <div class="journey-step">🧾 Due Diligence</div>
+      <div class="journey-step highlight">🏁 Closure</div>
+    </div>
 
-  <div class="center" style="margin-top:2.5rem">
-    <a href="journey.html" class="cta-button">Explore the full journey →</a>
-  </div>
-</section>
-
+    <div class="center" style="margin-top:2.75rem">
+      <a href="journey.html" class="cta-button">Explore the full journey →</a>
+    </div>
+  </section>
+</div>
 
 <!-- ENGAGEMENT -->
 <section id="engagement" class="deck-section" data-section="engagement">
@@ -256,19 +267,19 @@
   </p>
 
   <div class="engagement-visual-grid">
-    <div class="engagement-card">
+    <div class="engagement-card deck-card">
       <div class="section-icon">🎯</div>
-      <h3>Stage & Sector</h3>
+      <h3>Stage &amp; Sector</h3>
       <p>Early-stage technology companies with PMF or traction.</p>
     </div>
 
-    <div class="engagement-card">
+    <div class="engagement-card deck-card">
       <div class="section-icon">💼</div>
       <h3>Funding Rounds</h3>
       <p>Seed to Series A institutional rounds.</p>
     </div>
 
-    <div class="engagement-card highlight">
+    <div class="engagement-card deck-card highlight">
       <div class="section-icon">💰</div>
       <h3>Commercial Model</h3>
       <ul>
@@ -279,67 +290,59 @@
     </div>
   </div>
 
-  <div class="center" style="margin-top:2rem">
+  <div class="center" style="margin-top:2.5rem">
     <a href="engagement.html" class="cta-secondary">View engagement details →</a>
   </div>
 </section>
 
 <!-- CONTACT & REGISTERED DETAILS -->
-<section id="contact-details" class="deck-section contact-section">
-  <h2>Contact & Registered Details</h2>
-  <p class="section-subtitle">
-    Reach out to us or verify our official registration details.
-  </p>
+<div class="section-band alt-bg">
+  <section id="contact-details" class="deck-section" data-section="contact">
+    <h2>Contact &amp; Registered Details</h2>
+    <p class="section-subtitle">
+      Reach out to us or verify our official registration details.
+    </p>
 
-  <div class="contact-grid">
+    <div class="contact-grid">
 
-    <!-- CONTACT -->
-    <div class="contact-card">
-      <div class="contact-icon">✉️</div>
-      <h3>Get in Touch</h3>
-
-      <p class="contact-item">
-        <a href="mailto:alok@nurturiseadvisors.com">alok@nurturiseadvisors.com</a>
-      </p>
-      <p class="contact-item">
-        <a href="mailto:ashok@nurturiseadvisors.com">ashok@nurturiseadvisors.com</a>
-      </p>
-    </div>
-
-    <!-- ADDRESS -->
-    <div class="contact-card highlight">
-      <div class="contact-icon">📍</div>
-      <h3>Registered Address</h3>
-
-      <p class="address-text">
-        17, 2nd Floor, 7th Main,<br/>
-        Indiranagar II Stage,<br/>
-        Bengaluru, Karnataka – 560038<br/>
-        India
-      </p>
-    </div>
-
-    <!-- LEGAL -->
-    <div class="contact-card">
-      <div class="contact-icon">📄</div>
-      <h3>Legal Identifiers</h3>
-
-      <div class="legal-item">
-        <span>GSTN</span>
-        <strong>29AAYFN5349K1Z8</strong>
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <h3>Get in Touch</h3>
+        <p class="contact-item">
+          <a href="mailto:alok@nurturiseadvisors.com">alok@nurturiseadvisors.com</a>
+        </p>
+        <p class="contact-item">
+          <a href="mailto:ashok@nurturiseadvisors.com">ashok@nurturiseadvisors.com</a>
+        </p>
       </div>
 
-      <div class="legal-item">
-        <span>LLPIN</span>
-        <strong>ACQ-0067</strong>
+      <div class="contact-card highlight">
+        <div class="contact-icon">📍</div>
+        <h3>Registered Address</h3>
+        <p class="address-text">
+          17, 2nd Floor, 7th Main,<br/>
+          Indiranagar II Stage,<br/>
+          Bengaluru, Karnataka – 560038<br/>
+          India
+        </p>
       </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">📄</div>
+        <h3>Legal Identifiers</h3>
+        <div class="legal-item">
+          <span>GSTN</span>
+          <strong>29AAYFN5349K1Z8</strong>
+        </div>
+        <div class="legal-item">
+          <span>LLPIN</span>
+          <strong>ACQ-0067</strong>
+        </div>
+      </div>
+
     </div>
-
-  </div>
-</section>
-
-
-
+  </section>
+</div>
 
 </main>
 
